@@ -34,7 +34,7 @@ function SignUpForm() {
         password,
       );
 
-      const userDocRef = await createUserDocument(user, { displayName });
+      await createUserDocument(user, { displayName });
 
       setFormFields(defaultFormFields);
     } catch (error) {
