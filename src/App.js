@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navigation from "./routes/navigation/Navigation";
 import Auth from "./routes/auth/Auth";
 import Shop from "./routes/shop/Shop";
-import Cart from "./routes/cart/Cart";
+import Checkout from "./routes/checkout/Checkout";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="shop" element={<Shop />} />
         <Route path="auth" element={<Auth />} />
-        <Route path="cart" element={<Cart />} />
+        <Route path="checkout" element={<Checkout />} />
       </Route>
     </Routes>
   );
