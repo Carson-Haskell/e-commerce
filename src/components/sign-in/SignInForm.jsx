@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./SignIn.styles.scss";
+import "./SignIn.styles.jsx";
 import { signIn, signInWithGooglePopup } from "../../utils/firebase.utils";
-import FormInput from "../FormInput/FormInput";
+import FormInput from "../form-input/FormInput.jsx";
 import Button from "../button/Button";
 
-import "./SignIn.styles.scss";
+import { SigninContainer, SigninButtons } from "./SignIn.styles.jsx";
 
 const defaultFormFields = {
   email: "",
@@ -46,7 +46,7 @@ function SignInForm() {
   };
 
   return (
-    <div className="sign-in-container">
+    <SigninContainer>
       <h2>Already have an account?</h2>
       <span>Sign in with your email and password</span>
 
@@ -67,7 +67,7 @@ function SignInForm() {
           onChange={handleChange}
           required
         />
-        <div className="sign-in-buttons">
+        <SigninButtons>
           <Button type="submit">Sign in</Button>
           <Button
             type="button"
@@ -76,9 +76,9 @@ function SignInForm() {
           >
             Google Sign in
           </Button>
-        </div>
+        </SigninButtons>
       </form>
-    </div>
+    </SigninContainer>
   );
 }
 

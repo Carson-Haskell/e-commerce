@@ -5,10 +5,10 @@ import {
   createUserDocument,
 } from "../../utils/firebase.utils";
 
-import FormInput from "../FormInput/FormInput";
+import FormInput from "../form-input/FormInput";
 import Button from "../button/Button";
 
-import "./SignUp.styles.scss";
+import { SignupContainer } from "./SignUp.styles.jsx";
 
 const defaultFormFields = {
   displayName: "",
@@ -53,7 +53,7 @@ function SignUpForm() {
   };
 
   return (
-    <div className="sign-up-container">
+    <SignupContainer>
       <h2>Don't have an account?</h2>
       <span>Sign up with your email and password</span>
 
@@ -94,7 +94,7 @@ function SignUpForm() {
         />
         <Button type="submit">Sign Up</Button>
       </form>
-    </div>
+    </SignupContainer>
   );
 }
 
